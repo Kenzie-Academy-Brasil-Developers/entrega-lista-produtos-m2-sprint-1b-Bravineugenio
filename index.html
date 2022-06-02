@@ -6,31 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet">
     <title>Lista de Produtos</title>
 </head>
 <body>
-
+    
     <!-- CABEÇALHO -->
     <header>
+        <div class="cabecaSite">
+            <p class="tituloSite">Shop Now</p>
+        </div>
+        
+        
+        
         <div id="filters" class="filtersContainer">
             
-            <button class="estiloGeralBotoes estiloGeralBotoes--mostrarTodos">Mostrar Todos</button>
-            <button class="estiloGeralBotoes estiloGeralBotoes--filtrarHortifruti">Mostrar Hortifruti</button>
-            <button class="estiloGeralBotoes estiloGeralBotoes--filtrarLaticinios">Mostrar Laticinios</button>
-            <button class="estiloGeralBotoes estiloGeralBotoes--filtrarPanificadora">Mostrar Panificadora</button>
+            <button class="estiloGeralBotoes estiloGeralBotoes--mostrarTodos">Todos os produtos</button>
+            <button class="estiloGeralBotoes estiloGeralBotoes--filtrarHortifruti">Hortifruti</button>
+            <button class="estiloGeralBotoes estiloGeralBotoes--filtrarLaticinios">Laticinios</button>
+            <button class="estiloGeralBotoes estiloGeralBotoes--filtrarPanificadora">Panificadora</button>
             <div class="containerBuscaPorNome">
                 
-                <input type="text" placeholder="Nome do produto" class="campoBuscaPorNome">
+                <input type="text" placeholder="Pesquisar por" class="campoBuscaPorNome">
                 <button class="estiloGeralBotoes estiloGeralBotoes--botaoBuscaPorNome">Buscar</button>
-
+                
             </div>
         </div>
     </header>
     
+    <section class="campoLateral">
+        <div class ="carrinhoCompra">
+            <p class="textCarrinho">Carrinho</p>
+        </div>
+        <div class="carrinhoCompra2">
+            <ul class="carrinhoLista">
+               <!--  <li class="produtoCarrinho">
+                    <div class="divImg"> 
+                        <img src="/M2/SP1/entrega-lista-produtos-m2-sprint-1b-Bravineugenio/src/img/banana.png" alt="" class="imgCarrinho"></div>
+                    <div class="infoCarrinhoProduto">
+                        <p class="nomeProdutoCarrinho">Banana</p>
+                        <p class="secaoProdutoCarrinho">Hortifruti</p>
+                        <span class="precoProdutoCarrinho">2.00</span>
+                    </div>
+                    <div><button class="remover">X</button>
+                    </div>
+                </li> -->
+                
+            </ul>
+
+        </div>
+       
+       
+    
+     </section>
     <main>
         <div class="containerListaProdutos" id="listProdutos">
             <div class ="divCarrinho">
-            <ul>
+            <ul class="vitrineCarrinho">
             <!-- Utilize esse item html como template para a construção da lista de produtos -->
 
             <!-- Você pode remover esses comentários depois que fizer a construção pelo DOM -->
@@ -46,9 +80,19 @@
             </ul>
             </div>
             </div>
-        <div class="containerPrecoTotal">
-            <p>Preço total: R$<span id="precoTotal">00.00</span></p>
+        <div class="containerPrecoeQtd">
+            <div class="qtd">
+                <p class="qtdCarrinho">Quantidade</p>
+               <!--  <span class="valorQtd"></span> -->
+            </div>
+            
+            <div class="valor">
+                <p class="valorCarrinho">Total</p>
+               <!--  <span class="valortotal"></span> -->
+            </div>
         </div>
+
+
     </main>
 
     <script src="./src/js/dataProdutos.js"></script>
